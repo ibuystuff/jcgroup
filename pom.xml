@@ -34,7 +34,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.1.37</version>
+            <version>1.2.69</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -68,8 +68,7 @@
                         <configuration>
                             <target name="jni">
                                 <echo>Generating JNI headers</echo>
-                                <javah destdir="${project.basedir}/src/main/native"
-                                       classpath="${project.build.outputDirectory}">
+                                <javah destdir="${project.basedir}/src/main/native" classpath="${project.build.outputDirectory}">
                                     <class name="me.haosdent.cgroup.util.Threads"/>
                                 </javah>
                                 <exec executable="make"/>
