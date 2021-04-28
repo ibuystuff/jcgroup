@@ -29,7 +29,7 @@
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>2.4</version>
+            <version>2.7</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -68,8 +68,7 @@
                         <configuration>
                             <target name="jni">
                                 <echo>Generating JNI headers</echo>
-                                <javah destdir="${project.basedir}/src/main/native"
-                                       classpath="${project.build.outputDirectory}">
+                                <javah destdir="${project.basedir}/src/main/native" classpath="${project.build.outputDirectory}">
                                     <class name="me.haosdent.cgroup.util.Threads"/>
                                 </javah>
                                 <exec executable="make"/>
